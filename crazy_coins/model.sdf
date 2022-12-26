@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Only put coins in this model. All the links will spin -->
+<sdf version="1.4"> 
+  <model name="coins"> 
+    <static>0</static>  
+    <link name="coin_link"> 
+      <gravity>0</gravity>  
+      <pose>0.0 0.0 1 0 0 0</pose>  
+      <visual name="coin_12_Visual"> 
+        <pose>0 0 0 0 0 0</pose>  
+        <geometry> 
+          <mesh> 
+            <uri>model://crazy_coins/meshes/coin.dae</uri>  
+            <scale>0.4 0.4 0.4</scale> 
+          </mesh> 
+        </geometry>  
+        <material> 
+          <script> 
+            <uri>file://media/materials/scripts/gazebo.material</uri>  
+            <name>Gazebo/Yellow</name> 
+          </script> 
+        </material> 
+      </visual> 
+    </link>  
+    
+    <plugin name="coins_manager_plugin" filename="libcoins_manager_plugin.so"> 
+      <goal_coin>coin_2</goal_coin>  
+      <robot_name>labrob</robot_name>  
+      <update_rate>1.0</update_rate>  
+      <spin_velocity>1.570796327</spin_velocity> 
+    </plugin> 
+  </model> 
+</sdf>

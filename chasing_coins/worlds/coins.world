@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sdf version="1.6"> 
+  <world name="coins"> 
+    <gui fullscreen="0"> 
+      <camera name="user_camera"> 
+        <pose frame="">-40 40 20 0 0.667643 -1</pose>  
+        <view_controller>orbit</view_controller>  
+        <projection_type>perspective</projection_type> 
+      </camera> 
+    </gui>  
+    <!-- WORLD SETTINGS -->  
+    <scene> 
+      <ambient>1.0 1.0 1.0 1.0</ambient>  
+      <shadows>false</shadows> 
+    </scene>  
+    <spherical_coordinates> 
+      <!-- currently gazebo has a bug: instead of outputing lat, long, altitude in ENU
+      (x = East, y = North and z = Up) as the default configurations, it's outputting (-E)(-N)U,
+      therefore we rotate the default frame 180 so that it would go back to ENU -->  
+      <heading_deg>180</heading_deg>  
+      <!-- Appleton Tower coordinates -->  
+      <latitude_deg>55.944400</latitude_deg>  
+      <longitude_deg>-3.18629</longitude_deg> 
+    </spherical_coordinates>  
+    <light name="sun" type="directional"> 
+      <cast_shadows>1</cast_shadows>  
+      <pose frame="">0 0 10 0 -0 0</pose>  
+      <diffuse>0.8 0.8 0.8 1</diffuse>  
+      <specular>0.1 0.1 0.1 1</specular>  
+      <attenuation> 
+        <range>1000</range>  
+        <constant>0.9</constant>  
+        <linear>0.01</linear>  
+        <quadratic>0.001</quadratic> 
+      </attenuation>  
+      <direction>-0.5 0.5 -1</direction> 
+    </light>  
+    <!-- MODELS -->  
+    <include> 
+      <uri>model://ground_plane/</uri>  
+      <pose>0 0 0 0 0 0</pose> 
+    </include>  
+    <model name="coin_1"> 
+      <pose>2.346516975603463 0.9424777960769379 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_2"> 
+      <pose>4.635254915624211 1.8849555921538759 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_3"> 
+      <pose>6.809857496093201 2.827433388230814 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_4"> 
+      <pose>8.816778784387097 3.7699111843077517 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_5"> 
+      <pose>10.606601717798211 4.71238898038469 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_6"> 
+      <pose>12.135254915624213 5.654866776461628 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_7"> 
+      <pose>13.365097862825516 6.5973445725385655 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_8"> 
+      <pose>14.265847744427303 7.5398223686155035 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_9"> 
+      <pose>14.815325108927066 8.482300164692441 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_10"> 
+      <pose>15.0 9.42477796076938 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_11"> 
+      <pose>14.815325108927066 10.367255756846317 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_12"> 
+      <pose>14.265847744427305 11.309733552923255 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_13"> 
+      <pose>13.365097862825518 12.252211349000193 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_14"> 
+      <pose>12.135254915624213 13.194689145077131 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_15"> 
+      <pose>10.606601717798213 14.137166941154069 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_16"> 
+      <pose>8.816778784387099 15.079644737231007 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_17"> 
+      <pose>6.809857496093203 16.022122533307943 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_18"> 
+      <pose>4.635254915624213 16.964600329384883 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_19"> 
+      <pose>2.3465169756034645 17.907078125461823 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_20"> 
+      <pose>1.83697019872103e-15 18.84955592153876 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_21"> 
+      <pose>-3.1286893008046146 19.792033717615695 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_22"> 
+      <pose>-6.1803398874989455 20.734511513692635 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_23"> 
+      <pose>-9.079809994790933 21.676989309769574 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_24"> 
+      <pose>-11.75570504584946 22.61946710584651 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_25"> 
+      <pose>-14.14213562373095 23.561944901923447 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_26"> 
+      <pose>-16.180339887498945 24.504422698000386 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_27"> 
+      <pose>-17.820130483767358 25.446900494077326 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_28"> 
+      <pose>-19.02113032590307 26.389378290154262 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_29"> 
+      <pose>-19.753766811902754 27.3318560862312 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_30"> 
+      <pose>-20.0 28.274333882308138 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_31"> 
+      <pose>-19.753766811902757 29.216811678385078 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_32"> 
+      <pose>-19.021130325903073 30.159289474462014 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_33"> 
+      <pose>-17.82013048376736 31.10176727053895 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_34"> 
+      <pose>-16.180339887498953 32.044245066615886 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_35"> 
+      <pose>-14.142135623730955 32.98672286269283 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_36"> 
+      <pose>-11.755705045849467 33.929200658769766 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_37"> 
+      <pose>-9.079809994790939 34.8716784548467 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_38"> 
+      <pose>-6.180339887498953 35.814156250923645 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_39"> 
+      <pose>-3.1286893008046226 36.75663404700058 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model>  
+    <model name="coin_40"> 
+      <pose>-4.898587196589413e-15 37.69911184307752 0 0 0 0</pose>  
+      <include> 
+        <static>false</static>  
+        <uri>model://crazy_coins</uri> 
+      </include> 
+    </model> 
+  </world> 
+</sdf>
